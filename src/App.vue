@@ -8,7 +8,7 @@
         <h3>Add Book</h3>
       </div>
       <div class="panel-body">
-        <form id="form" class="form-inline">
+        <form id="form" class="form-inline" v-on:submit.prevent="addBook">
           <div class="form-group">
             <label for="bookTitle">Title</label>
             <input type="text" id="bookTitle" class="form-control" v-model="newBook.title">
@@ -86,6 +86,14 @@ export default {
         author: '',
         url: ''
       }
+    }
+  },
+  methods: {
+    addBook: function() {
+      booksRef.push(this.newBook);
+      this.newBook.title = '';
+      this.newBook.author = '';
+      this.newBook.url = '';
     }
   }
 }
