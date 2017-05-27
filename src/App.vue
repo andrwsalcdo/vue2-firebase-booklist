@@ -53,7 +53,7 @@
                 {{ book. author }}
               </td>
               <td>
-                <span class="glyphicon glyphicon-trash" v-on:click.="deleteBook(book)"></span>
+                <span class="glyphicon glyphicon-trash" v-on:click="deleteBook(book)"></span>
               </td>
             </tr>
           </tbody>
@@ -101,8 +101,8 @@ export default {
       this.newBook.author = '';
       this.newBook.url = '';
     },
-    deleteBook: function() {
-      // booksRef.
+    deleteBook: function(book) {
+      booksRef.child(book['.key']).remove();
     }
   }
 }
