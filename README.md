@@ -1,6 +1,10 @@
-# vue2-firebase-booklist
+# Vue.js 2 & Firebase - Building Real Time Single Page Web Applications
 
-more to follow...
+
+Build a simple book list app that uses a Firebase realtime database as a backend and Vue.js 2 for a view layer.
+
+
+![demo png](src/assets/vue2-firebase-booklist.png)
 
 ## Build Setup
 
